@@ -7,11 +7,12 @@
     },
     "skills": ["Java 17", "Spring Boot", "Spring Security", "Hibernate", "SQL", "Docker", "Linux", "Git/GitHub", "MySQL", "PostgreSQL", "Junit", "Maven"],
     "contact": {
+        "location": "México, México",
         "email": "ricardoespace@gmail.com",
         "phone": "+56 5959 528 172",
-        "location": "México, México",
         "links": {
-            "LinkedIn": "https://linkedin.com/in/esteban-rg"
+            "LinkedIn": "https://linkedin.com/in/esteban-rg",
+            "Github" : "https://github.com/Esteban-RG"
         }
     },
     "experience": [
@@ -20,8 +21,8 @@
             "period": "Marzo 2024 - Septiembre 2025",
             "title": { "es": "Desarrollador Backend", "en": "Backend Developer" },
             "description": {
-                "es": "Desarrollé e integré APIs RESTful usando Spring Boot e Hibernate, aplicando principios SOLID[cite: 11]. Utilicé Docker para la contenerización y el despliegue [cite: 12], modelé y administré bases de datos MySQL [cite: 13] y gestioné el control de versiones con Git/GitHub en un entorno ágil[cite: 16].",
-                "en": "Developed and integrated RESTful APIs using Spring Boot and Hibernate, applying SOLID principles[cite: 11]. Used Docker for containerization and deployment [cite: 12], modeled and administered MySQL databases [cite: 13], and managed version control with Git/GitHub in an agile environment[cite: 16]."
+                "es": "Desarrollé e integré APIs RESTful usando Spring Boot e Hibernate, aplicando principios SOLID. Utilicé Docker para la contenerización y el despliegue , modelé y administré bases de datos MySQL  y gestioné el control de versiones con Git/GitHub en un entorno ágil.",
+                "en": "Developed and integrated RESTful APIs using Spring Boot and Hibernate, applying SOLID principles. Used Docker for containerization and deployment , modeled and administered MySQL databases , and managed version control with Git/GitHub in an agile environment."
             }
         }
     ],
@@ -30,13 +31,13 @@
             "school": "TECNOLOGICO DE ESTUDIOS SUPERIORES",
             "period": "Finalizado en Septiembre 2025",
             "title": { "es": "Ingeniería en Sistemas Computacionales", "en": "Computer Systems Engineering" },
-            "description": { "es": "Promedio global: 93/100 [cite: 20]", "en": "Overall average: 93/100 [cite: 20]" }
+            "description": { "es": "Promedio global: 93/100 ", "en": "Overall average: 93/100 " }
         },
         {
             "school": "ALURA LATAM",
             "period": "Finalizado en Septiembre 2025",
-            "title": { "es": "Oracle Next Education Program F2 T4 Back-end [cite: 22]", "en": "Oracle Next Education Program F2 T4 Back-end [cite: 22]" },
-            "description": { "es": "Perfil de egresado: app.aluracursos.com/emprega-one/profile/ricardoespace [cite: 23]", "en": "Graduate profile: app.aluracursos.com/emprega-one/profile/ricardoespace [cite: 23]" }
+            "title": { "es": "Oracle Next Education Program F2 T4 Back-end ", "en": "Oracle Next Education Program F2 T4 Back-end " },
+            "description": { "es": "Perfil de egresado: app.aluracursos.com/emprega-one/profile/ricardoespace ", "en": "Graduate profile: app.aluracursos.com/emprega-one/profile/ricardoespace " }
         }
     ],
     "projects": [
@@ -45,8 +46,8 @@
             "year": "2024",
             "stack": ["Java", "Spring Boot", "Hibernate", "Docker", "MySQL"],
             "description": { 
-                "es": "Como parte de mis residencias, desarrollé una API RESTful para la gestión de datos. El proyecto incluyó el modelado de la base de datos relacional en MySQL [cite: 13], la implementación de endpoints con Spring Boot [cite: 11] y el despliegue de la aplicación en contenedores de Docker[cite: 12].", 
-                "en": "As part of my residency, I developed a RESTful API for data management. The project involved modeling the relational database in MySQL [cite: 13], implementing endpoints with Spring Boot [cite: 11], and deploying the application in Docker containers[cite: 12]." 
+                "es": "Como parte de mis residencias, desarrollé una API RESTful para la gestión de datos. El proyecto incluyó el modelado de la base de datos relacional en MySQL , la implementación de endpoints con Spring Boot  y el despliegue de la aplicación en contenedores de Docker.", 
+                "en": "As part of my residency, I developed a RESTful API for data management. The project involved modeling the relational database in MySQL , implementing endpoints with Spring Boot , and deploying the application in Docker containers." 
             }
         }
     ]
