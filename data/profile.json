@@ -1,0 +1,45 @@
+{
+	"name": "Esteban Reyes",
+	"role": { "es": "Ingeniero de Software", "en": "Software Engineer" },
+	"about": {
+		"es": "Desarrollador con enfoque en backend Java/Spring y buenas prácticas. Esta biografía es editable en data/profile.json.",
+		"en": "Developer focused on Java/Spring backend and best practices. You can edit this text in data/profile.json."
+	},
+	"skills": ["Java", "Spring Boot", "REST", "Docker", "SQL", "Git"],
+	"contact": {
+		"email": "",
+		"phone": "",
+		"location": "",
+		"links": {
+			"LinkedIn": "https://linkedin.com/in/esteban-rg",
+			"Portfolio PDF": "Ricardo_Esteban_Reyes_CV.pdf"
+		}
+	},
+	"experience": [
+		{
+			"company": "Empresa X",
+			"period": "2023 - Presente",
+			"title": { "es": "Desarrollador Backend", "en": "Backend Developer" },
+			"description": {
+				"es": "Responsable de APIs REST con Spring Boot, seguridad y pruebas.",
+				"en": "Responsible for REST APIs with Spring Boot, security and testing."
+			}
+		}
+	],
+	"education": [
+		{
+			"school": "Universidad / Instituto",
+			"period": "Año de inicio - Año de fin",
+			"title": { "es": "Título o carrera", "en": "Degree or major" },
+			"description": { "es": "Detalles relevantes.", "en": "Relevant details." }
+		}
+	],
+	"projects": [
+		{
+			"name": "Proyecto Destacado",
+			"year": "2024",
+			"stack": ["Java", "Spring", "Docker"],
+			"description": { "es": "Descripción breve del proyecto.", "en": "Short project description." }
+		}
+	]
+}

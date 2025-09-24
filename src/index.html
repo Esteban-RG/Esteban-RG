@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portafolio - Esteban Reyes</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="public/favicon.ico">
+</head>
+<body>
+	<header class="container">
+		<div class="brand">
+			<img src="public/avatar.png" alt="Avatar" class="avatar" onerror="this.style.display='none'">
+			<div>
+				<h1 id="name">Esteban Reyes</h1>
+				<p id="role">Software Engineer</p>
+			</div>
+		</div>
+		<div class="lang-switch">
+			<select id="langSelect" aria-label="Language selector">
+				<option value="es">ES</option>
+				<option value="en">EN</option>
+			</select>
+		</div>
+	</header>
+
+	<main class="container">
+		<section>
+			<h2 data-i18n="about_title">Sobre mí</h2>
+			<p id="about"></p>
+		</section>
+
+		<section>
+			<h2 data-i18n="skills_title">Habilidades</h2>
+			<ul id="skills" class="chips"></ul>
+		</section>
+
+		<section>
+			<h2 data-i18n="experience_title">Experiencia</h2>
+			<div id="experience" class="cards"></div>
+		</section>
+
+		<section>
+			<h2 data-i18n="education_title">Educación</h2>
+			<div id="education" class="cards"></div>
+		</section>
+
+		<section>
+			<h2 data-i18n="projects_title">Proyectos</h2>
+			<div id="projects" class="cards"></div>
+		</section>
+	</main>
+
+	<footer class="container">
+		<h2 data-i18n="contact_title">Contacto</h2>
+		<div id="contact"></div>
+	</footer>
+
+	<script src="app.js"></script>
+</body>
+</html>
