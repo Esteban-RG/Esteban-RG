@@ -1,0 +1,39 @@
+# Archivos de desarrollo
+.git
+.gitignore
+README.md
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Scripts de despliegue
+deploy*.sh
+generate-ssl.sh
+
+# Archivos temporales
+*.tmp
+*.log
+*.swp
+*.swo
+*~
+
+# Directorios de dependencias
+node_modules/
+.npm/
+.yarn/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Archivos de backup
+*.bak
+*.backup
+
+
+
