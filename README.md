@@ -1,93 +1,85 @@
-# Portafolio de Esteban Reyes
+<!-- GitHub Profile README for Ricardo Esteban Reyes Gutierrez (Esteban-RG) -->
 
-Sitio estático multilenguaje (ES/EN) para presentar CV/portafolio. Se sirve con Nginx en Docker.
+<h1 align="center">Hi, I'm Ricardo Esteban Reyes Gutierrez 👋</h1>
+<h3 align="center">Backend Developer | Linux Enthusiast | Problem Solver</h3>
 
-## Estructura
-- `public/`: assets estáticos servidos por Nginx
-- `src/`: HTML/CSS/JS del sitio
-- `i18n/`: traducciones `es.json` y `en.json`
-- `data/profile.json`: datos del CV consumidos por el frontend
-- `Dockerfile` y `nginx.conf`: imagen y configuración del servidor
+<p align="center">
+  <a href="https://linkedin.com/in/esteban-rg"><img src="https://img.shields.io/badge/LinkedIn-Esteban--RG-blue?logo=linkedin" /></a>
+  <a href="mailto:ricardoespace@gmail.com"><img src="https://img.shields.io/badge/Gmail-ricardoespace%40gmail.com-red?logo=gmail" /></a>
+  <a href="https://app.aluracursos.com/emprega-one/profile/ricardoespace"><img src="https://img.shields.io/badge/Alura%20Profile-Visit-green?logo=alura" /></a>
+</p>
 
-## Desarrollo local
-Puedes abrir `src/index.html` directamente en el navegador.
+---
 
-## Construir y ejecutar con Docker
+👨‍💻 **About Me**
+- 🎓 Recent graduate in Computer Systems Engineering (avg. 93/100) from Tecnológico de Estudios Superiores.
+- 💻 Focused on backend development with Java and Spring Boot.
+- 🐧 Passionate about Linux, open source, and efficient system design.
+- 🌱 Always learning new technologies and adapting quickly to new environments.
 
-### Método rápido (recomendado para Manjaro)
+---
 
-#### Despliegue HTTP (puerto 8080)
-```bash
-./deploy.sh
-```
+🛠 **Tech Stack**
+- **Languages:** Java 17, SQL, Python
+- **Frameworks:** Spring Boot, Spring MVC, Spring Security, Hibernate
+- **Databases:** MySQL, PostgreSQL
+- **Tools:** Docker, Maven, Git/GitHub, Linux, JUnit
+- **Frontend:** HTML, CSS, Bootstrap, React (for UI integration)
+- **DevOps:** Containerization & deployment with Docker (Render & self-hosted)
 
-#### Despliegue HTTPS (puertos 80 y 443)
-```bash
-./deploy.sh --https
-# o usar el script dedicado:
-./deploy-https.sh
-```
+---
 
-### Método manual
+💼 **Experience**
+- **Backend Developer Intern**  
+  _Tecnológico de Estudios Superiores (Mar 2024 – Sep 2025, Mexico)_  
+  - Managed Linux-based dev & deployment environments for backend projects.
+  - Developed and integrated RESTful APIs using Spring Boot & Hibernate, applying SOLID principles.
+  - Orchestrated deployments with Docker, both in the cloud and on-premises.
+  - Designed efficient relational schemas and managed MySQL databases.
+  - Led technical presentations and collaborated with multidisciplinary teams.
+  - Implemented intuitive UIs with HTML, CSS, Bootstrap, and React.
+  - Used Git/GitHub for agile, collaborative version control.
 
-#### HTTP simple
-```bash
-docker build -t esteban-portfolio .
-docker run --rm -p 8080:80 esteban-portfolio
-```
+---
 
-#### HTTPS con Docker Compose
-```bash
-# Generar certificados SSL (primera vez)
-./generate-ssl.sh
+🏆 **Education & Certifications**
+- **BSc in Computer Systems Engineering**  
+  _Tecnológico de Estudios Superiores, Sep 2025_
+- **Oracle Next Education (ONE) Back-end - F2 T4**  
+  _Alura LATAM, Sep 2025_  
+  [My Alura Profile](https://app.aluracursos.com/emprega-one/profile/ricardoespace)
+- **English (C1 CEFR)**  
+  _EFSET Placement Test, May 2025_
+  [Certificate](https://cert.efset.org/en/RdS5sa)
 
-# Desplegar con HTTPS
-docker-compose up --build -d
-```
+---
 
-### Configuración para Manjaro Linux
-El Dockerfile está optimizado para Manjaro con:
-- Zona horaria configurada a México
-- Usuario no-root para mayor seguridad
-- Healthcheck integrado
-- Permisos optimizados
-- **Soporte completo para HTTPS con SSL/TLS**
+🌐 **Languages**
+- 🇲🇽 Spanish (Native)
+- 🇬🇧 English (C1 Advanced)
 
-### URLs de acceso:
-- **HTTP**: http://localhost:8080
-- **HTTPS**: https://localhost (puerto 443)
-- **HTTP con redirección**: http://localhost (puerto 80) → redirige a HTTPS
+---
 
-## Configuración HTTPS
+🚀 **Favorite Projects**
+- [Control-robot-manipulador](https://github.com/Esteban-RG/Control-robot-manipulador) – Robotics control backend
+- [Alumnithon](https://github.com/Esteban-RG/Alumnithon) – Collaborative learning platform
 
-### Características de seguridad:
-- **SSL/TLS moderno**: TLSv1.2 y TLSv1.3
-- **Cifrados seguros**: ECDHE y AES256-GCM
-- **Headers de seguridad**: HSTS, XSS Protection, Content Security Policy
-- **Redirección automática**: HTTP → HTTPS
-- **Certificados autofirmados** para desarrollo local
+---
 
-### Para producción con Let's Encrypt:
-```bash
-# Reemplaza los certificados autofirmados con certificados reales
-# Copia tus certificados a la carpeta ssl/
-cp /path/to/your/cert.pem ssl/cert.pem
-cp /path/to/your/private.key ssl/key.pem
+📫 **Connect with me**
+- [LinkedIn](https://linkedin.com/in/esteban-rg)
+- [Gmail](mailto:ricardoespace@gmail.com)
+- [Alura Profile](https://app.aluracursos.com/emprega-one/profile/ricardoespace)
 
-# Reinicia el contenedor
-docker-compose restart
-```
+---
 
-### Archivos de configuración HTTPS:
-- `nginx.conf`: Configuración SSL/TLS y headers de seguridad
-- `docker-compose.yml`: Orquestación con puertos 80 y 443
-- `generate-ssl.sh`: Generación de certificados autofirmados
-- `deploy-https.sh`: Script de despliegue HTTPS
+<details>
+<summary>Fun Fact</summary>
+<p>
+  I thrive in collaborative environments, love automating workflows, and One Piece!
+</p>
+</details>
 
-## Personalización
-- Edita `data/profile.json` con tu información.
-- Traducciones en `i18n/es.json` y `i18n/en.json`.
-- Estilos en `src/styles.css`.
+---
 
-## Licencia
-MIT
+*Let's build something great together! 🚀*
