@@ -2,14 +2,13 @@
     "name": "Ricardo Esteban Reyes Gutierrez",
     "role": { "es": "Desarrollador Backend", "en": "Backend Developer" },
     "about": {
-        "es": "Recién egresado de Ingeniería en Sistemas Computacionales con enfoque en desarrollo Backend en Java. Tengo experiencia práctica en administración de sistemas Linux, bases de datos SQL, contenedores con Docker, y desarrollo de APIs REST usando Spring Boot.",
-        "en": "Recent graduate of Computer Systems Engineering with a focus on Backend development in Java. I have practical experience in Linux systems administration, SQL databases, containers with Docker, and developing REST APIs using Spring Boot."
+        "es": "Egresado de Ingeniería en Sistemas Computacionales con enfoque en desarrollo Backend en Java. Tengo experiencia práctica en administración de sistemas Linux, bases de datos SQL, contenedores con Docker, y desarrollo de APIs REST usando Spring Boot.",
+        "en": "Graduate of Computer Systems Engineering with a focus on Backend development in Java. I have practical experience in Linux systems administration, SQL databases, containers with Docker, and developing REST APIs using Spring Boot."
     },
     "skills": ["Java 17", "Spring Boot", "Spring Security", "Hibernate", "SQL", "Docker", "Linux", "Git/GitHub", "MySQL", "PostgreSQL", "Junit", "Maven"],
     "contact": {
         "location": "México, México",
         "email": "ricardoespace@gmail.com",
-        "phone": "+56 5959 528 172",
         "links": {
             "LinkedIn": "https://linkedin.com/in/esteban-rg",
             "Github" : "https://github.com/Esteban-RG"
@@ -29,13 +28,13 @@
     "education": [
         {
             "school": "TECNOLOGICO DE ESTUDIOS SUPERIORES",
-            "period": "Finalizado en Septiembre 2025",
+            "period": "Sep 2025",
             "title": { "es": "Ingeniería en Sistemas Computacionales", "en": "Computer Systems Engineering" },
             "description": { "es": "Promedio global: 93/100 ", "en": "Overall average: 93/100 " }
         },
         {
             "school": "ALURA LATAM",
-            "period": "Finalizado en Septiembre 2025",
+            "period": "Jul 2023",
             "title": { "es": "Oracle Next Education Program F2 T4 Back-end ", "en": "Oracle Next Education Program F2 T4 Back-end " },
             "description": { "es": "Perfil de egresado: app.aluracursos.com/emprega-one/profile/ricardoespace ", "en": "Graduate profile: app.aluracursos.com/emprega-one/profile/ricardoespace " }
         }
