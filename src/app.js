@@ -1,17 +1,48 @@
 'use strict';
 
 (function() {
-	const DEFAULT_LANG = localStorage.getItem('lang') || (navigator.language?.startsWith('es') ? 'es' : 'en');
-	const langSelect = document.getElementById('langSelect');
-	if (langSelect) {
-		langSelect.value = DEFAULT_LANG;
-		langSelect.addEventListener('change', () => {
-			localStorage.setItem('lang', langSelect.value);
-			location.reload();
-		});
-	}
+    const DEFAULT_LANG = new URLSearchParams(window.location.search).get('lang') || 
+                        localStorage.getItem('lang') || 
+                        (navigator.language?.startsWith('es') ? 'es' : 'en');
+    
+    // Set the HTML lang attribute
+    document.documentElement.lang = DEFAULT_LANG;
+    
+    // Update canonical and meta tags
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+        canonical.href = window.location.origin + window.location.pathname;
+    }
+    
+    const langSelect = document.getElementById('langSelect');
+    if (langSelect) {
+        langSelect.value = DEFAULT_LANG;
+        langSelect.addEventListener('change', async () => {
+            const newLang = langSelect.value;
+            localStorage.setItem('lang', newLang);
+            
+            // Update URL without reloading
+            const url = new URL(window.location);
+            url.searchParams.set('lang', newLang);
+            window.history.pushState({}, '', url);
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = newLang;
+            
+            // Load and apply new content
+            await loadContent(newLang);
+        });
+    }
 
-	async function fetchJSON(path) {
+    async function loadContent(lang) {
+        const [profile, i18n] = await Promise.all([
+            fetchJSON('data/profile.json'),
+            fetchJSON('i18n/' + lang + '.json')
+        ]);
+        updateContent(profile, i18n, lang);
+    }
+
+    async function fetchJSON(path) {
 		const res = await fetch(path + '?v=' + Date.now());
 		if (!res.ok) throw new Error('HTTP ' + res.status + ' for ' + path);
 		return await res.json();
@@ -60,6 +91,69 @@
 			if (dict[key]) el.textContent = dict[key];
 		});
 	}
+
+    function updateContent(profile, i18n, lang) {
+        // Update all i18n elements
+        applyI18n(i18n);
+        
+        // Update meta tags
+        document.title = i18n.page_title || 'Portafolio - Esteban Reyes';
+        document.querySelector('meta[name="description"]').content = i18n.meta_description || '';
+        document.querySelector('meta[name="keywords"]').content = i18n.meta_keywords || '';
+        document.querySelector('meta[property="og:title"]').content = i18n.og_title || '';
+        document.querySelector('meta[property="og:description"]').content = i18n.og_description || '';
+        
+        // Update dynamic content
+        setText(document.getElementById('name'), profile.name);
+        setText(document.getElementById('role'), profile.role[lang] || profile.role.en);
+        setText(document.getElementById('about'), profile.about[lang] || profile.about.en);
+
+        const skillsEl = document.getElementById('skills');
+        if (skillsEl) renderChips(profile.skills, skillsEl);
+
+        // Update cards
+        renderCards(profile.experience?.map((e) => ({
+            title: e.title[lang] || e.title.en,
+            company: e.company,
+            period: e.period,
+            description: e.description[lang] || e.description.en
+        })), document.getElementById('experience'));
+
+        renderCards(profile.education?.map((e) => ({
+            title: e.title[lang] || e.title.en,
+            company: e.school,
+            period: e.period,
+            description: e.description?.[lang] || e.description?.en
+        })), document.getElementById('education'));
+
+        renderCards(profile.projects?.map((p) => ({
+            title: p.name,
+            company: p.stack?.join(', '),
+            period: p.year,
+            description: p.description[lang] || p.description.en
+        })), document.getElementById('projects'));
+
+        // Update contact information
+        const contact = profile.contact || {};
+        const contactEl = document.getElementById('contact');
+        if (contactEl) {
+            contactEl.innerHTML = '';
+            if (contact.email) contactEl.appendChild(createEl('p', '', `📧 ${contact.email}`));
+            if (contact.phone) contactEl.appendChild(createEl('p', '', `📱 ${contact.phone}`));
+            if (contact.location) contactEl.appendChild(createEl('p', '', `📍 ${contact.location}`));
+            if (contact.links) {
+                const links = createEl('div', 'links');
+                Object.entries(contact.links).forEach(([name, url]) => {
+                    const a = createEl('a', '', name);
+                    a.href = url;
+                    a.target = '_blank';
+                    a.rel = 'noopener noreferrer';
+                    links.appendChild(a);
+                });
+                contactEl.appendChild(links);
+            }
+        }
+    }
 
 	async function main() {
 		const lang = DEFAULT_LANG;

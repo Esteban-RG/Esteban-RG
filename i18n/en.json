@@ -1,8 +1,13 @@
 {
-	"about_title": "About",
-	"skills_title": "Skills",
-	"experience_title": "Experience",
-	"education_title": "Education",
-	"projects_title": "Projects",
-	"contact_title": "Contact"
+    "page_title": "Esteban Reyes | Backend Developer",
+    "meta_description": "Esteban Reyes, Backend Developer with experience in Java, Spring Boot, and modern web development technologies.",
+    "meta_keywords": "backend developer, java, spring boot, web developer, esteban reyes, software development, mysql, docker",
+    "og_title": "Esteban Reyes - Backend Developer",
+    "og_description": "Professional portfolio of Esteban Reyes, specialized in backend development with Java and Spring Boot.",
+    "about_title": "About me",
+    "skills_title": "Skills",
+    "experience_title": "Experience",
+    "education_title": "Education",
+    "projects_title": "Projects",
+    "contact_title": "Contact"
 }
